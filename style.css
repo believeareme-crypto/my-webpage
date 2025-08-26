@@ -1,0 +1,743 @@
+* { margin:0; padding:0; box-sizing:border-box; } /* 全局清除 margin/padding，设置 box-sizing */
+body, html { width:100%; font-family:Arial,sans-serif; scroll-behavior:smooth; } /* 页面宽度 100%，平滑滚动 */
+
+/* 背景图片 */
+.bg-img {
+  width: 100%; /* 宽度100%自适应屏幕 */
+  height: auto; /* 高度按原始比例自适应 */
+  display: block; /* 去掉底部间距 */
+}
+
+/* 每屏容器 */
+.section {
+  position: relative; /* 为绝对定位的素材/文字提供参照 */
+  width: 100%; /* 宽度100% */
+}
+
+/* 文案层基础样式 */
+.text-layer {
+  position: absolute; /* 绝对定位，可放置在背景图任意位置 */
+  font-size: 3.3vw; /* 字体大小随屏幕宽度自适应 */
+  color: #ffffff; /* 白色字体 */
+  font-family: "PingFang SC", "Arial", sans-serif; /* 字体 */
+  white-space: nowrap; /* 不自动换行 */
+  line-height: 2.3em; /* 行高 */
+  overflow: hidden; /* 超出部分隐藏 */
+}
+
+/* 每张背景图文字垂直位置 */
+.pos1 {
+  top: 35%; /* 垂直位置 */
+  left: 50%; /* 水平位置 */
+  transform: translateX(-50%); /* 以自身中心水平居中 */
+  text-align: center; /* 居中对齐 */
+}
+
+.pos2 {
+  top: 18%; /* 垂直位置 */
+  left: 50%; /* 水平位置 */
+  transform: translateX(-50%); /* 以自身中心水平居中 */
+  text-align: center; /* 居中对齐 */
+}
+
+.pos3 {
+  top: 1%; /* 垂直位置 */
+  left: 68%; /* 水平位置 */
+  transform: translateX(-50%); /* 以自身中心水平居中 */
+  text-align: right; /* 右对齐 */
+}
+
+.pos4 {
+  top: 39.5%; /* 垂直位置 */
+  left: 10%; /* 水平位置 */
+  text-align: left; /* 左对齐 */
+}
+
+.pos5 {
+  top: 56%; /* 垂直位置 */
+  left: 45%; /* 水平位置 */
+  text-align: right; /* 右对齐 */
+}
+
+.pos6 {
+  top: 64%; /* 垂直位置 */
+  left: 70%; /* 水平位置 */
+}
+
+.pos7 {
+  top: 90.2%; /* 垂直位置 */
+  left: 50%; /* 水平位置 */
+  transform: translateX(-50%); /* 以自身中心水平居中 */
+  text-align: center; /* 居中对齐 */
+}
+
+.pos8 {
+  top: 15%; /* 垂直位置 */
+  left: 60%; /* 水平位置 */
+  line-height: 2em; /* 行高 */
+  text-align: left; /* 左对齐 */
+}
+
+.pos9 {
+  top: 86%; /* 垂直位置 */
+  left: 10%; /* 水平位置 */
+  text-align: left; /* 左对齐 */
+}
+
+.pos10 {
+  top: 45%; /* 垂直位置 */
+  left: 50%; /* 水平位置 */
+  transform: translateX(-50%); /* 以自身中心水平居中 */
+  text-align: right; /* 右对齐 */
+}
+
+.pos11 {
+  top: 88%; /* 垂直位置 */
+  left: 50%; /* 水平位置 */
+  transform: translateX(-50%); /* 以自身中心水平居中 */
+  text-align: center; /* 居中对齐 */
+}
+
+.pos12 {
+  top: 35%; /* 垂直位置 */
+  left: 7%; /* 水平位置 */
+  text-align: left; /* 左对齐 */
+}
+
+.pos13 {
+  top: 61%; /* 垂直位置 */
+  left: 88%; /* 水平位置 */
+  writing-mode: vertical-rl;   /* 设置文字从上到下、从右到左 */
+  text-orientation: upright;   /* 保持文字直立（尤其是拉丁字母、数字） */
+  letter-spacing: 10px;         /* 字间距 */
+  transform: translateX(-50%); /* 以自身中心水平居中 */
+  text-align: center; /* 居中对齐 */
+}
+
+.pos14 {
+  top: 2.5%; /* 垂直位置 */
+  left: 50%; /* 水平位置 */
+  transform: translateX(-50%); /* 以自身中心水平居中 */
+  text-align: center; /* 居中对齐 */
+}
+
+.pos15 {
+  font-size: 3vw; /* 字体大小随屏幕宽度自适应 */
+  line-height: 2.2em; /* 行高 */
+  top: 56%; /* 垂直位置 */
+  left: 50%; /* 水平位置 */
+  transform: translateX(-50%); /* 以自身中心水平居中 */
+  text-align: center; /* 居中对齐 */
+}
+
+/* 黑底GIF 素材 */
+.section .top-layer-gif {
+  position: absolute;     /* 绝对定位 */
+  top: 31%;               /* 垂直位置 */
+  left: 50%;              /* 水平位置 */
+  width: 100%;             /* 素材宽度，可改 */
+  transform: translate(-50%, -50%); /* 以中心点定位 */
+  z-index: 20;            /* 在其他素材之上 */
+  pointer-events: none;   /* 不阻挡交互 */
+}
+
+/* 黑底GIF 素材 */
+.section .top-layer-gif2 {
+  position: absolute;     /* 绝对定位 */
+  top: 36%;               /* 垂直位置 */
+  left: 74%;              /* 水平位置 */
+  width: 80%;             /* 素材宽度，可改 */
+  transform: translate(-50%, -50%); /* 以中心点定位 */
+  z-index: 20;            /* 在其他素材之上 */
+  pointer-events: none;   /* 不阻挡交互 */
+}
+
+/* 黑底GIF 素材 */
+.section .top-layer-gif9 {
+  position: absolute;     /* 绝对定位 */
+  top: 69%;               /* 垂直位置 */
+  left: 50%;              /* 水平位置 */
+  width: 134%;             /* 素材宽度，可改 */
+  transform: translate(-50%, -50%); /* 以中心点定位 */
+  z-index: 20;            /* 在其他素材之上 */
+  pointer-events: none;   /* 不阻挡交互 */
+}
+
+/* 黑底GIF 素材 */
+.section .top-layer-gif10 {
+  position: absolute;     /* 绝对定位 */
+  top: 64%;               /* 垂直位置 */
+  left: 50%;              /* 水平位置 */
+  width: 87%;             /* 素材宽度，可改 */
+  transform: translate(-50%, -50%); /* 以中心点定位 */
+  z-index: 20;            /* 在其他素材之上 */
+  pointer-events: none;   /* 不阻挡交互 */
+}
+
+/* 黑底GIF 素材 */
+.section .top-layer-gif3 {
+  position: absolute;     /* 绝对定位 */
+  top: 42%;
+  left: 100%;
+  width: 40%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以中心点定位 */
+  z-index: 20;            /* 在其他素材之上 */
+  pointer-events: none;   /* 不阻挡交互 */
+}
+
+/* 黑底GIF 素材 */
+.section .top-layer-gif4 {
+  position: absolute;     /* 绝对定位 */
+  top: 100%;
+  left: 100%;
+  width: 45%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以中心点定位 */
+  z-index: 20;            /* 在其他素材之上 */
+  pointer-events: none;   /* 不阻挡交互 */
+}
+
+/* 黑底GIF 素材 */
+.section .top-layer-gif5 {
+  position: absolute;     /* 绝对定位 */
+  top: 15%;
+  left: 69%;
+  width: 27%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以中心点定位 */
+  z-index: 20;            /* 在其他素材之上 */
+  pointer-events: none;   /* 不阻挡交互 */
+}
+
+/* 黑底GIF 素材 */
+.section .top-layer-gif6 {
+  position: absolute;     /* 绝对定位 */
+  top: 36%;
+  left: 82%;
+  width: 25%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以中心点定位 */
+  z-index: 20;            /* 在其他素材之上 */
+  pointer-events: none;   /* 不阻挡交互 */
+}
+
+/* 黑底GIF 素材 */
+.section .top-layer-gif7 {
+  position: absolute;     /* 绝对定位 */
+  top: 43%;
+  left:79%;
+  width: 40%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以中心点定位 */
+  z-index: 20;            /* 在其他素材之上 */
+  pointer-events: none;   /* 不阻挡交互 */
+}
+
+/* 黑底GIF 素材 */
+.section .top-layer-gif8 {
+  position: absolute;     /* 绝对定位 */
+  top: 45%;
+  left: 120%;
+  width: 80%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以中心点定位 */
+  z-index: 20;            /* 在其他素材之上 */
+  pointer-events: none;   /* 不阻挡交互 */
+}
+
+/* 黑底GIF 素材 */
+.section .top-layer-gif11 {
+  position: absolute;     /* 绝对定位 */
+  top: 29.5%;
+  left: 50%;
+  width: 100%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以中心点定位 */
+  z-index: 20;            /* 在其他素材之上 */
+  pointer-events: none;   /* 不阻挡交互 */
+}
+
+/* 给素材 4 添加外发光效果 */
+.section .top-layer-gif3 img,
+.section .top-layer-gif4 img,
+.section .top-layer-gif5 img,
+.section .top-layer-gif6 img,
+.section .top-layer-gif8 img,
+.section .top-layer12 img,
+.section .top-layer13 img,
+.section .top-layer14 img,
+.section .top-layer15 img,
+.section .top-layer22 img,
+.section .top-layer23 img,
+.section .top-layer24 img,
+.section .top-layer25 img{
+  width: 100%;                   /* 图片宽度随容器缩放 */
+  height: auto;                  /* 保持比例 */
+  animation: shake-slow 2s infinite ease-in-out, 
+             glow-breath 3s infinite ease-in-out; /* 抖动 + 呼吸光效 */
+  filter: drop-shadow(0 0 20px rgb(252, 255, 236, 0.6))
+          drop-shadow(0 0 15px rgba(255, 253, 214, 0.6)); /* 外发光层叠 */
+}
+
+.section .top-layer-gif7 img{
+  width: 100%;                   /* 图片宽度随容器缩放 */
+  height: auto;                  /* 保持比例 */
+  animation: glow-breath 2s infinite ease-in-out; /* 抖动 + 呼吸光效 */
+  filter: drop-shadow(0 0 20px rgb(252, 255, 236, 0.6))
+          drop-shadow(0 0 15px rgba(255, 253, 214, 0.6)); /* 外发光层叠 */
+}
+
+/* 外发光呼吸动画 */
+@keyframes glow-breath {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4))
+            drop-shadow(0 0 10px rgba(255, 253, 214, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.7))
+            drop-shadow(0 0 40px rgba(255, 253, 214, 0.7));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.4))
+            drop-shadow(0 0 10px rgba(255, 253, 214, 0.4));
+  }
+}
+
+.section .top-layer-gif img,
+.section .top-layer-gif2 img,
+.section .top-layer-gif3 img,
+.section .top-layer-gif4 img,
+.section .top-layer-gif5 img,
+.section .top-layer-gif6 img,
+.section .top-layer-gif7 img,
+.section .top-layer-gif8 img,
+.section .top-layer-gif9 img,
+.section .top-layer-gif10 img,
+.section .top-layer-gif11 img{
+  width: 100%; 
+  height: auto;
+  display: block;
+
+  /* 关键：让黑色透明 */
+  mix-blend-mode: screen; 
+}
+
+/* 第1张背景图素材1 */
+.section .top-layer {
+  position: absolute; /* 相对于背景图1 */
+  top: 13.6%; /* 垂直位置 */
+  left: 83.5%; /* 水平位置 */
+  width: 40%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为定位点 */
+  z-index: 9999; /* 在文字上方 */
+  pointer-events: none; /* 不阻挡点击/滚动 */
+}
+
+/* 第1张背景图素材2 */
+.section .top-layer2 {
+  position: absolute; /* 相对于背景图1 */
+  top: 17.3%;
+  left: 20.2%;
+  width: 30%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为旋转基点 */
+  z-index: 9999; /* 在文字上方 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第1张背景图素材3 */
+.section .top-layer3 {
+  position: absolute; /* 相对于背景图1 */
+  top: 44%;
+  left: 7.6%;
+  width: 90%; /* 素材宽度 */
+  z-index: 9999; /* 在文字上方 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材4 */
+.section .top-layer4 {
+  position: absolute; /* 相对于背景图1 */
+  top: 12%; /* 垂直位置 */
+  left: 50%; /* 水平位置 */
+  width: 95%; /* 素材宽度 */
+  z-index: 10; /* 在文字上方 */
+  pointer-events: none; /* 不阻挡点击/滚动 */
+}
+
+/* 第2张背景图素材5 */
+.section .top-layer5 {
+  position: absolute; /* 相对于背景图1 */
+  top: 14%;
+  left: 16.5%;
+  width: 25%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为旋转基点 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材6 */
+.section .top-layer6 {
+  position: absolute; /* 相对于背景图1 */
+  top: 1.3%;
+  left: 60%;
+  width: 21%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材7 */
+.section .top-layer7 {
+  position: absolute; /* 相对于背景图1 */
+  top: 25.5%;
+  left: 25%;
+  width: 50%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材7 */
+.section .top-layer8 {
+  position: absolute; /* 相对于背景图1 */
+  top: 85.5%;
+  left: -16%;
+  width: 50%; /* 素材宽度 */
+  z-index: 999; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer9 {
+  position: absolute; /* 相对于背景图1 */
+  top: 83%;
+  left: -25%;
+  width: 60%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材7 */
+.section .top-layer10 {
+  position: absolute; /* 相对于背景图1 */
+  top: 4%;
+  left: 50%;
+  width: 10%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer11 {
+  position: absolute; /* 相对于背景图1 */
+  top: 46.7%;
+  left: 10%;
+  width: 21.5%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer12 {
+  position: absolute; /* 相对于背景图1 */
+  top: 49.5%;
+  left: 25%;
+  width: 5%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材7 */
+.section .top-layer13 {
+  position: absolute; /* 相对于背景图1 */
+  top: 49.7%;
+  left: 51%;
+  width: 8%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer14 {
+  position: absolute; /* 相对于背景图1 */
+  top: 58%;
+  left: 84%;
+  width: 6.5%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer15 {
+  position: absolute; /* 相对于背景图1 */
+  top: 65%;
+  left: 95%;
+  width: 5%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer16 {
+  position: absolute; /* 相对于背景图1 */
+  top: 64.7%;
+  left: 80%;
+  width: 12%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材7 */
+.section .top-layer17 {
+  position: absolute; /* 绝对定位，可放置在背景图任意位置 */
+  top: 85%;
+  left: 50%;
+  width: 95%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer18 {
+  position: absolute; /* 相对于背景图1 */
+  top: 69.5%;
+  left: 15%;
+  width: 25%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer19 {
+  position: absolute; /* 相对于背景图1 */
+  top: 85.5%;
+  left: 76%;
+  width: 40%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer20 {
+  position: absolute; /* 相对于背景图1 */
+  top: 97.5%;
+  left: 50%;
+  transform: translateX(-50%); /* 以自身中心水平居中 */
+  width: 50%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer22 {
+  position: absolute; /* 相对于背景图1 */
+  top: 90%;
+  left: 29%;
+  width: 7%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为定位点 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer23 {
+  position: absolute; /* 相对于背景图1 */
+  top: 90%;
+  left: 50.9%;
+  width: 5.7%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为定位点 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer24 {
+  position: absolute; /* 相对于背景图1 */
+  top: 94.7%;
+  left: 20.7%;
+  width: 5.5%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为定位点 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer25 {
+  position: absolute; /* 相对于背景图1 */
+  top: 95%;
+  left: 36.7%;
+  width: 7%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为定位点 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer27 {
+  position: absolute; /* 相对于背景图1 */
+  top: 54.5%;
+  left: 27%;
+  width: 22%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为定位点 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer28 {
+  position: absolute; /* 相对于背景图1 */
+  top: 71%;
+  left: 70%;
+  width: 35%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为定位点 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer29 {
+  position: absolute; /* 相对于背景图1 */
+  top: 80%;
+  left: 50%;
+  width: 98%; /* 素材宽度 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer30 {
+  position: absolute; /* 相对于背景图1 */
+  top: 97.5%;
+  left: 64%;
+  width: 38%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为定位点 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer31 {
+  position: absolute; /* 相对于背景图1 */
+  top: 42%;
+  left: 17.5%;
+  width: 21%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为定位点 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 第2张背景图素材8 */
+.section .top-layer33 {
+  position: absolute; /* 相对于背景图1 */
+  top: 11%;
+  left: 50%;
+  width: 20%; /* 素材宽度 */
+  transform: translate(-50%, -50%); /* 以素材中心为定位点 */
+  z-index: 11; /* 高于素材1 */
+  pointer-events: none; /* 不阻挡交互 */
+}
+
+/* 素材旋转缩放动画基础 */
+.section .top-layer img,
+.section .top-layer2 img,
+.section .top-layer3 img,
+.section .top-layer4 img,
+.section .top-layer5 img,
+.section .top-layer6 img,
+.section .top-layer7 img,
+.section .top-layer8 img,
+.section .top-layer9 img,
+.section .top-layer10 img,
+.section .top-layer11 img,
+.section .top-layer12 img,
+.section .top-layer13 img,
+.section .top-layer14 img,
+.section .top-layer15 img,
+.section .top-layer16 img,
+.section .top-layer17 img,
+.section .top-layer18 img,
+.section .top-layer19 img,
+.section .top-layer20 img,
+.section .top-layer21 img,
+.section .top-layer22 img,
+.section .top-layer23 img,
+.section .top-layer24 img,
+.section .top-layer25 img,
+.section .top-layer26 img,
+.section .top-layer27 img,
+.section .top-layer28 img,
+.section .top-layer29 img,
+.section .top-layer30 img,
+.section .top-layer31 img,
+.section .top-layer33 img,
+.section .top-layer34 img,
+.section .top-layer35 img,
+.section .top-layer36 img {
+  width: 100%; /* 填充父容器宽度 */
+  height: auto; /* 高度按比例自适应 */
+  transform-origin: center center; /* 旋转缩放中心在自身中心 */
+}
+
+/* 素材1动画 */
+.section .top-layer img {
+  animation: rotateScaleOpacity1 5s linear infinite; /* 动画名/时长/线性/循环 */
+}
+
+/* 素材2动画 */
+.section .top-layer2 img {
+  animation: rotateScaleOpacity2 6s linear infinite;
+}
+
+/* 动画关键帧 素材1 */
+@keyframes rotateScaleOpacity1 {
+  0% { transform: rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: rotate(180deg) scale(0.5); opacity: 0.7; }
+  100% { transform: rotate(360deg) scale(1); opacity: 1; }
+}
+
+/* 动画关键帧 素材2 */
+@keyframes rotateScaleOpacity2 {
+  0% { transform: rotate(0deg) scale(0.3); opacity: 0.8; }
+  50% { transform: rotate(180deg) scale(0.75); opacity: 1; }
+  100% { transform: rotate(360deg) scale(0.3); opacity: 0.8; }
+}
+
+/* 抖动动画关键帧（缓慢版） */
+@keyframes shake-slow {
+  0%   { transform: translate(-50%, -50%) rotate(0deg); }
+  25%  { transform: translate(-52%, -50%) rotate(-1deg); }
+  50%  { transform: translate(-48%, -50%) rotate(1deg); }
+  75%  { transform: translate(-52%, -50%) rotate(-1deg); }
+  100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* 给第1张背景图素材1 添加抖动效果 */
+.section .top-layer4 img {
+  width: 100%;                   /* 图片宽度随容器缩放 */
+  height: auto;                  /* 保持比例 */
+  animation: shake-slow 2s infinite ease-in-out; /* 缓慢抖动 */
+}
+
+/* 给第1张背景图素材1 添加抖动效果 */
+.section .top-layer17 img {
+  width: 100%;                   /* 图片宽度随容器缩放 */
+  height: auto;                  /* 保持比例 */
+  animation: shake-slow 2s infinite ease-in-out; /* 缓慢抖动 */
+}
+
+/* 给第1张背景图素材1 添加抖动效果 */
+.section .top-layer29 img {
+  width: 100%;                   /* 图片宽度随容器缩放 */
+  height: auto;                  /* 保持比例 */
+  animation: shake-slow 2s infinite ease-in-out; /* 缓慢抖动 */
+}
+
+/* 初始状态，不播放动画 */
+.scale-x-animation {
+  display: inline-block;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* 滚动触发后加这个类开始动画 */
+.scale-x-animate {
+  animation: scaleXGrow 2s forwards;
+  animation-delay: 1s; /* 延迟1秒再播放 */
+}
+
+@keyframes scaleXGrow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
